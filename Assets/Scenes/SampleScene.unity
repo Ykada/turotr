@@ -205,13 +205,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0, y: -0.9993449, z: -0, w: 0.036192946}
+  m_LocalPosition: {x: 1.84, y: 0.57, z: 10.56}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -175.852, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -549,6 +549,7 @@ GameObject:
   - component: {fileID: 1086381298}
   - component: {fileID: 1086381303}
   - component: {fileID: 1086381304}
+  - component: {fileID: 1086381305}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: GameController
@@ -568,8 +569,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1384fba7e2f8cf44695c566bd8c30baf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameObject: {fileID: 0}
-  m_Thrust: 20
+  speed: 5
+  jumpForce: 5
+  cameraTransform: {fileID: 330585546}
+  mouseSensitivity: 2
 --- !u!65 &1086381299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -707,6 +710,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!143 &1086381305
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086381297}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 1
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1582381547
 PrefabInstance:
   m_ObjectHideFlags: 0
