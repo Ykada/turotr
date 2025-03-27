@@ -10,3 +10,8 @@ tutor 3
 
 ![turotr - SampleScene - Windows, Mac, Linux - Unity 6 (6000 0 33f1) _DX11_ 2025-03-26 10-46-29](https://github.com/user-attachments/assets/9e8206e7-13d6-4a24-9d8a-6d4474878252)
 https://github.com/Ykada/turotr/blob/main/Assets/Movement.cs
+
+tutor 4
+
+![turotr - SampleScene - Windows, Mac, Linux - Unity 6 (6000 0 33f1)_ _DX11_ 2025-03-27 09-58-33](https://github.com/user-attachments/assets/da713bc6-e4be-49f8-b880-a2eb222ed701)
+
