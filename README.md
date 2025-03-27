@@ -14,4 +14,4 @@ https://github.com/Ykada/turotr/blob/main/Assets/Movement.cs
 tutor 4
 
 ![turotr - SampleScene - Windows, Mac, Linux - Unity 6 (6000 0 33f1)_ _DX11_ 2025-03-27 09-58-33](https://github.com/user-attachments/assets/da713bc6-e4be-49f8-b880-a2eb222ed701)
-
+https://github.com/Ykada/turotr/blob/main/Assets/PICKUP.cs
