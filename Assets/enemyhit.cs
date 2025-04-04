@@ -9,7 +9,7 @@ public string targettag;
         // Check if the object collides with a bullet (or any object with the "Projectile" ta
         if (collision.gameObject.CompareTag(targettag))
         {
-            Destroy(gameObject);  // Destroy the object this script is attached to
+            Destroy(collisontag);  // Destroy the object this script is attached to
         }
     }
 }
