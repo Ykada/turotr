@@ -1,82 +1,42 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileBehavior : MonoBehaviour
+
+public class Explosion : MonoBehaviour
 {
-    public GameObject projectilePrefab;
-    public Transform firePoint;
-    public float projectileSpeed = 20f;
-    public float fireRate = 0.5f;
-    public float lifetime = 5f;
-    public GameObject impactEffectPrefab;
+    // Start is called before the first frame update
 
-    public GameObject replacementObject;
+    [SerializeField] private GameObject particle;
+    [SerializeField] private GameObject explosion;
+    [SerializeField] private string tag;
+    public GameObject player;
 
-    private float nextFireTime = 0f;
-
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0) && Time.time >= nextFireTime)
-        {
-            FireProjectile();
-            nextFireTime = Time.time + fireRate;
-        }
-    }
-
-    void FireProjectile()
-    {
-        GameObject projectile = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
-        Rigidbody rb = projectile.GetComponent<Rigidbody>();
-        if (rb != null)
-        {
-            rb.AddForce(firePoint.forward * projectileSpeed, ForceMode.VelocityChange);
-        }
-
-        ProjectileLifetime projectileLifetime = projectile.AddComponent<ProjectileLifetime>();
-        projectileLifetime.lifetime = lifetime;
-        projectileLifetime.impactEffectPrefab = impactEffectPrefab;
-        projectileLifetime.replacementObject = replacementObject;
-    }
-}
-
-public class ProjectileLifetime : MonoBehaviour
-{
-    public float lifetime = 5f;
-    public GameObject impactEffectPrefab;
-    public GameObject replacementObject;
-
-    public GameObject playerDeathEffectPrefab;
 
     void Start()
     {
-        Destroy(gameObject, lifetime);
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+
+        if (collision.collider.tag == tag)
         {
-            Vector3 collisionPosition = collision.gameObject.transform.position;
+            explosion = Instantiate(particle, transform.position, transform.rotation);
+            Destroy(explosion, 2f);
 
-            if (playerDeathEffectPrefab != null)
+            if (tag == "Object")
             {
-                Instantiate(playerDeathEffectPrefab, collisionPosition, Quaternion.identity);
-            }
-
-            Destroy(collision.gameObject);
-
-            if (replacementObject != null)
-            {
-                Instantiate(replacementObject, collisionPosition, Quaternion.identity);
+                Destroy(player);
             }
         }
 
-        if (impactEffectPrefab != null)
-        {
-            Vector3 impactPosition = collision.contacts[0].point;
-            Quaternion impactRotation = Quaternion.LookRotation(collision.contacts[0].normal);
-            Instantiate(impactEffectPrefab, impactPosition, impactRotation);
-        }
-
-        Destroy(gameObject);
     }
 }
