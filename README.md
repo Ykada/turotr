@@ -21,3 +21,4 @@ tutor 5
 ![turotr - SampleScene - Windows, Mac, Linux - Unity 6 (6000 0 33f1)_ _DX11_ 2025-04-10 11-37-45](https://github.com/user-attachments/assets/80e8bc6f-1702-4224-ae13-c9d2eeb6421a)
 
 https://github.com/Ykada/turotr/blob/main/Assets/ProjectileBehavior.cs
+https://github.com/Ykada/turotr/blob/main/Assets/schooting.cs
