@@ -1,29 +1,47 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public float health = 100f;  // Starting health of the player
-    public float damageAmount = 10f;  // Amount of health to be taken per bullet hit
+    public float health = 100f;
+    public float damageAmount = 25f;
+    public GameObject player;
+    [SerializeField] private string tagToCollideWith = "Projectile";
+    public int hitCount = 0;
+    public Text healthText; // Reference to the UI Text component to display health
 
-    // This method is called when the player is hit by a bullet
-    public void TakeDamage(float damage)
+    private void Start()
     {
-        health -= damage;  // Decrease health
-
-        // Prevent health from going below zero
-        if (health < 0)
-        {
-            health = 0;
-        }
-
-        // Optionally, you can handle a message here or feedback, but don't destroy the player
-        Debug.Log("Player health: " + health);
+        // Initialize the health text on start
+        UpdateHealthText();
     }
 
-    // You can still have a method for updating the UI (if you choose to add one)
-    public void UpdateHealthUI()
+    private void OnCollisionEnter(Collision collision)
     {
-        // You could update the health UI here (if you have one)
-        // For example: healthText.text = "Health: " + health.ToString();
+        if (collision.collider.CompareTag(tagToCollideWith))
+        {
+            health -= damageAmount;
+            hitCount++;
+
+            // Update the health display after taking damage
+            UpdateHealthText();
+
+            if (health <= 0)
+            {
+                health = 0;
+                Destroy(gameObject);
+            }
+
+            if (hitCount >= 4)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    // Method to update the health display in the UI
+    private void UpdateHealthText()
+    {
+        healthText.text = "Health: " + health.ToString(); // Update text with the current health value
     }
 }

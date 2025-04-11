@@ -1,20 +1,20 @@
 using UnityEngine;
 
-public class enemyhit : MonoBehaviour
+public class enemyschootingscript : MonoBehaviour
 {
     public GameObject projectilePrefab;
     public Transform firePoint;
     public float projectileSpeed = 20f;
     public float fireRate = 0.5f;
-    private float nextFireTime = 0f;
-    public AnimationClip fireClip;
+    public GameObject player;
 
+    private float nextFireTime = 0f;
 
     void Update()
     {
-        if (gameObject.CompareTag("Player"))
+        if (GameObject.FindGameObjectWithTag("Player") != null)
         {
-            if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
+            if (Time.time >= nextFireTime)
             {
                 FireProjectile();
                 nextFireTime = Time.time + fireRate;
@@ -22,10 +22,11 @@ public class enemyhit : MonoBehaviour
         }
         else
         {
+            // No player detected, switch to automatic shooting every 1 second
             if (Time.time >= nextFireTime)
             {
                 FireProjectile();
-                nextFireTime = Time.time + fireRate;
+                nextFireTime = Time.time + 1f; // Automatic fire rate of 1 second
             }
         }
     }

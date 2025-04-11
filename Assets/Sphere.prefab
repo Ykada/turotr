@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 5747549792102121487}
   - component: {fileID: 7249121542283119651}
   - component: {fileID: -2041752163041240510}
-  - component: {fileID: 850121093979149429}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Projectile
@@ -4939,17 +4938,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &850121093979149429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7595021367431953574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0615aa34eda9b0d49805b195a47e8474, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifetime: 5
-  impactEffectPrefab: {fileID: 0}
