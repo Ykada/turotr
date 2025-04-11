@@ -877,7 +877,9 @@ MonoBehaviour:
   firePoint: {fileID: 1253771758}
   projectileSpeed: 20
   fireRate: 0.5
-  fireClip: {fileID: 0}
+  fireClip: {fileID: -203655887218126122, guid: b954f134c35533f4ca09bc3c4483abee, type: 3}
+  Animator:
+  - {fileID: 616690717}
 --- !u!114 &616690711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -968,6 +970,11 @@ MeshCollider:
 --- !u!4 &616690716 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 23554ae78069bb249a92981e476dc168, type: 3}
+  m_PrefabInstance: {fileID: 60118863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &616690717 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 23554ae78069bb249a92981e476dc168, type: 3}
   m_PrefabInstance: {fileID: 60118863}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &709343766
@@ -1834,6 +1841,7 @@ MonoBehaviour:
   projectileSpeed: 20
   fireRate: 0.5
   fireClip: {fileID: -203655887218126122, guid: b954f134c35533f4ca09bc3c4483abee, type: 3}
+  Animator: []
 --- !u!114 &1086381311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1914,7 +1922,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142050223}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2792,7 +2800,9 @@ MonoBehaviour:
   firePoint: {fileID: 1558935969}
   projectileSpeed: 20
   fireRate: 0.5
-  fireClip: {fileID: 0}
+  fireClip: {fileID: -203655887218126122, guid: b954f134c35533f4ca09bc3c4483abee, type: 3}
+  Animator:
+  - {fileID: 1754476316}
 --- !u!114 &1754476310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2883,6 +2893,11 @@ MeshCollider:
 --- !u!4 &1754476315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 23554ae78069bb249a92981e476dc168, type: 3}
+  m_PrefabInstance: {fileID: 247999729}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1754476316 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 23554ae78069bb249a92981e476dc168, type: 3}
   m_PrefabInstance: {fileID: 247999729}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1841635806
@@ -3089,7 +3104,14 @@ MonoBehaviour:
   firePoint: {fileID: 1841635807}
   projectileSpeed: 20
   fireRate: 0.5
-  fireClip: {fileID: 0}
+  fireClip: {fileID: -203655887218126122, guid: b954f134c35533f4ca09bc3c4483abee, type: 3}
+  Animator:
+  - {fileID: 1908568382}
+--- !u!95 &1908568382 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 23554ae78069bb249a92981e476dc168, type: 3}
+  m_PrefabInstance: {fileID: 1582381547}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1931912848
 GameObject:
   m_ObjectHideFlags: 0

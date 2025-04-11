@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class enemyhit : MonoBehaviour
 {
@@ -8,10 +9,12 @@ public class enemyhit : MonoBehaviour
     public float fireRate = 0.5f;
     private float nextFireTime = 0f;
     public AnimationClip fireClip;
+    public Animator[] Animator;
 
 
     void Update()
     {
+        Animator animator = GetComponent<Animator>();
         if (gameObject.CompareTag("Player"))
         {
             if (Input.GetMouseButton(0) && Time.time >= nextFireTime)
@@ -25,6 +28,7 @@ public class enemyhit : MonoBehaviour
             if (Time.time >= nextFireTime)
             {
                 FireProjectile();
+                animator.SetTrigger("Shooting");
                 nextFireTime = Time.time + fireRate;
             }
         }
