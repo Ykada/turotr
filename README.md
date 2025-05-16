@@ -22,3 +22,11 @@ tutor 5
 
 https://github.com/Ykada/turotr/blob/main/Assets/ProjectileBehavior.cs
 https://github.com/Ykada/turotr/blob/main/Assets/schooting.cs
+
+Tutor 6
+
+![turotr - SampleScene - Windows, Mac, Linux - Unity 6 (6000 0 33f1) _DX11_ 2025-04-11 14-30-34](https://github.com/user-attachments/assets/3a07855e-4703-4cfb-9f5b-5733ce63c16b)
+
+https://github.com/Ykada/turotr/blob/main/Assets/PlayerHealth.cs
+https://github.com/Ykada/turotr/blob/main/Assets/ProjectileBehavior.cs 
+https://github.com/Ykada/turotr/blob/main/Assets/schooting.cs
