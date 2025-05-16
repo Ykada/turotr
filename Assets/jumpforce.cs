@@ -16,7 +16,7 @@ public class jumpforce : MonoBehaviour
         // Check if the player presses the jump button (spacebar by default)
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // Apply an upward force to the player’s Rigidbody to simulate a jump
+            Debug.Log("Jumping!");
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
