@@ -1,54 +1,47 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class cointscript : MonoBehaviour
 {
-    // To Do's:
-    // Private Variabele voor score type int
-    // Private List voor "Coins" type int
-    [SerializeField] private int score;
-    [SerializeField] private List<int> Coins;
+    public int score;
+    public float time = 25f;
+    public List<GameObject> Coins;
 
     void Start()
     {
-        // Loop: toon 3x een startbericht met Debug.Log in een loop
-
-        for (int i = 0; i < 3; i++)
+        score = 0;
+        Coins = new List<GameObject>(GameObject.FindGameObjectsWithTag("Coin"));
+        foreach (GameObject coin in Coins)
         {
-            Debug.Log("Start");
+            coin.GetComponent<Collider>().isTrigger = true;
         }
-
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Coin"))
+        {
+            score++;
+            Debug.Log("Score: " + score);
+            Destroy(collision.gameObject);
+        }
+    }
     void Update()
     {
-
-
-        if (score >= 50)
+        if (score >= 5)
         {
             Debug.Log("You win");
         }
-
-
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (time <= 0)
         {
-
-
-
-
-            int randomWaarde = Random.Range(10, 20);
-            AddCoin(randomWaarde);
-
+            Debug.Log("Game Over");
         }
-    }
-
-    // Functie om een munt toe te voegen
-    void AddCoin(int coinValue)
-    {
-
-        Coins.Add(coinValue);
-        score += coinValue;
-        Debug.Log("Pickup coin value" + coinValue);
+        else
+        {
+            time -= Time.deltaTime;
+            Debug.Log("Time left: " + time + score);
+            Debug.Log("Score: " + score);
+        }
     }
 }

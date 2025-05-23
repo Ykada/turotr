@@ -6,11 +6,13 @@ TagManager:
   tags:
   - Projectile
   - Object
+  - Coin
+  - coin
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Coin
   - Water
   - UI
   - 
