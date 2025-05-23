@@ -16,3 +16,10 @@ Tutor3
 https://github.com/Ykada/turotr/blob/main/Assets/cointscript.cs
 
 ![turotr - SampleScene - Windows, Mac, Linux - Unity 6 (6000 0 33f1)_ _DX11_ 2025-05-23 12-08-10](https://github.com/user-attachments/assets/32cdc56c-fdc7-4b0c-bc1a-be8cb331114d)
+
+Tutor 4
+
+https://github.com/Ykada/turotr/blob/main/Assets/scripts/cointscript.cs
+https://github.com/Ykada/turotr/blob/main/Assets/scripts/Loadingnieuwscenescript.cs
+
+![turotr - SampleScene - Windows, Mac, Linux - Unity 6 (6000 0 33f1)_ _DX11_ 2025-05-23 12-08-10 (1)](https://github.com/user-attachments/assets/e4cad509-6b2e-404e-85d8-f924e91f50ab)
