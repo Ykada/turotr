@@ -6,9 +6,9 @@ using UnityEngine;
 public class cointscript : MonoBehaviour
 {
     public int score;
+    public int maxScore = 5;
     public float time = 25f;
     public List<GameObject> Coins;
-    public LayerMask coinLayerMask;
     float x;
     float y;
     float z;
@@ -41,9 +41,10 @@ public class cointscript : MonoBehaviour
     }
     void Update()
     {
-        if (score >= 5)
+        if (score >= maxScore)
         {
             Debug.Log("You win");
+            
         }
         if (time <= 0)
         {
